@@ -15,3 +15,5 @@ Mobile-Friendly Design: Ensures accessibility across different devices with a re
 Robust Backend System: Uses PHP and a structured database for secure and efficient data handling.
 
 ![Project Description](https://github.com/tran-hana/Book-Cataloging-System/blob/main/localhost_BookSpace_index.php.png)
+
+![Project Description](https://github.com/tran-hana/Book-Cataloging-System/blob/main/localhost_BookSpace_private_functions_signup.php.png)
