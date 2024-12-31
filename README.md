@@ -27,3 +27,5 @@ Robust Backend System: Uses PHP and a structured database for secure and efficie
 ![Project Description](https://github.com/tran-hana/Book-Cataloging-System/blob/main/localhost_BookSpace_private_functions_booklist.php_search.png)
 
 ![Project Description](https://github.com/tran-hana/Book-Cataloging-System/blob/main/localhost_BookSpace_private_functions_newbook.php.png)
+
+![Project Description](https://github.com/tran-hana/Book-Cataloging-System/blob/main/localhost_BookSpace_private_functions_update.php_id%3D11.png)
