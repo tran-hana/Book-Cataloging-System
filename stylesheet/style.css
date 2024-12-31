@@ -1,0 +1,1018 @@
+/*
+ * Name: Ha Nhu Y Tran, Qian Cheng - Group 9
+ * Assignment 2
+ * Date: Nov 23, 2024
+ * Description: This CSS file is used to format the layout and styling for all webpages in our BookSpace projects.
+ * It designs layout structure, responsive design, and consistent navigation across all pages, enhancing the visual representation for all web pages.
+*/
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14pt;
+    
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+
+.back-ground {
+    background-image: url('../images/background1.png'); /* source: https://unsplash.com/photos/green-leafed-plant-2zDw14yCYqk */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    height: 85vh; /* Adjusts the height for better visual representation */
+    align-items: center;
+}
+
+
+/* Ensure background is blurred appropriately to avoid covering the text content */
+.blur-background {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent overlay */
+    backdrop-filter: blur(40px); /* Adjust the blur level here */
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    margin: 10px auto; /* Center the content */
+    width:40%;
+}
+
+/* Header Styling for "header1.php", which the shared header for index.php, login.php and signup.php */
+#header1 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color:#f5efe8 ;
+    text-align: center;
+    color: green;
+    border: 2px solid grey;
+}
+
+/* Header Styling for "header2.php", which the shared header for other php files */
+#header2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: green;
+    background-color:#f5efe8;
+    border-bottom: 2px solid #ddd;
+    border: 2px solid grey;
+    flex-wrap: wrap;
+}
+
+/* Styling for logo */
+header img {
+    width: 8%;
+    border-radius: 50%; /* Makes the logo round */
+    display: block;
+    margin:0 auto;
+}
+
+.image {
+    width: 45%; /* Adjust the width of logo in header2.php */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;    
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for button and anchor link on the right of header2.php */
+.header-right{
+    display: flex;
+}
+
+.header-item1{
+    margin: 10px 0;
+}
+
+.header-right button,
+.header-right a {
+    margin-left: 15px;
+    padding: 8px 16px;
+    background-color: #b15858;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Override the orginal color for button "Log Out" to have a different color */
+.header-right button {
+background-color: #005689;
+font-size: 12pt;
+}
+
+
+.header-left a {
+    background-color: #2eb872;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+header nav {
+    margin: 10px 0 10px 0;
+}
+
+/* Styling for anchor links in header */
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+    font-size: 12pt;
+    }
+
+header nav a:hover {
+    background-color: #777;
+}
+
+header button:hover {
+    background-color: #777;
+}
+
+
+main {
+    line-height: 1.5;
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+/* Add bottom margin for paragraphs in each seaction of main */
+main section p {
+    margin-bottom: 10px;
+}
+
+
+section div {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+section div p {
+    color: #555;
+}
+
+.intro-content{
+    text-align: left;
+}
+
+.intro-highlight{
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /*  adds space between columns */
+    background: #f5f9ee;
+    padding: 10px;
+}
+
+.flex-item {
+    flex: 1 1 22%; /* Flex-grow, flex-shrink, flex-basis */
+    box-sizing: border-box; /* Includes padding and borders in item width */
+    padding: 20px; /* Optional padding */
+    overflow-wrap: break-word;
+}
+
+
+.homediv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    height: auto;
+    gap: 20px;
+    background: #f5f9ee;
+}
+
+
+/* Navigation links in main content */
+main nav {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+main nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;    
+}
+
+main nav a:hover {
+    background-color: #1abc9c;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #f5efe8;
+    color: darkgreen;
+    border: 2px solid grey;
+    font-size: 12pt;
+}
+
+.login-container,
+.signup-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align:left;
+}
+
+/* Background color for signup page */
+#s1{
+    background-color: #e3e3e3;
+}
+
+/*Styling for section in showpage */
+#ss1{
+    text-align: left;
+}
+
+/* Styling for content in delete.page */
+#home{
+    margin: 10px;
+    background-color: #e3e3e3;
+}
+
+/* this Styling apply for form in login.php and signup.php */
+.form-group { 
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Styling for form input  */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust the space between checkbox and label */
+    margin-bottom: 10px;
+}
+
+.flex-style {
+    display: flex;
+    flex-wrap: wrap;           /* Allows items to wrap to the next line */
+    gap: 10px;                 /* Adds space between each checkbox */
+    justify-content: space-between; /* Spreads checkboxes evenly across the container */
+}
+
+/* Button Styling */
+.signup-button{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 10px;
+    background-color: #e3e3e3;
+    box-shadow:none;
+} 
+
+.login-button, .action-button {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 10px;
+    background-color: transparent;
+    box-shadow:none;
+}
+
+.button {
+    display: inline-block;    
+    text-align: center;
+    background-color: #be3144;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-login {  /* This styling only applies to login navigation link in index page */
+    display: inline-block;    
+    text-align: center;
+    background-color: #be3144;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color:darkgreen;
+    
+}
+
+/* Styling when hovering the button */
+.button:hover {
+    background-color: #004b8d;
+}
+
+.add-link { /*Styling for the link to add a new book*/
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+    border: 2px solid grey;
+    border-radius: 12px;
+    color:darkred;
+    font-weight: bold    
+}
+
+/* Link Styling */
+.signup-link,
+.login-link {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+} 
+
+.bookimage {
+    width: 35%;
+}
+
+/*Styling for the show book content in show.php */
+dl {
+    clear: both;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+dt {
+    float: left;
+    font-weight: bold;
+    width: 175px;
+}
+
+dd {
+    margin-left: 180px;
+}
+
+#year{width: 20% !important;}
+
+.search-section {
+    margin: 20px auto;
+    padding: 20px;
+    justify-content: space-between;
+    width:70%;
+    align-items: center;
+    
+}
+
+#search-form{
+    width: 100%; /*Ensure the form for searching and filtering take up 100$ of the container */
+}
+
+.search-filter-style{ /* Styling for the part containig the option for "search-in" and "filter" */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.search-filter-style div  { /*Styling apply option "search-in" and "filter" */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-filter-style div div {
+    box-shadow: none;
+    justify-items: center;
+    background-color: transparent;
+    flex-wrap: wrap;
+}
+
+#search_box { /* Styling for the search box */
+    width:85%;
+    margin:10px auto;
+    padding:10px;
+    display:flex;
+    gap: 25px;
+}
+
+#search{
+    width:70%; /* Styling for the the witdh for search box */
+}
+
+#search_type{ /* Styling for "search in" */
+    width: 80%;
+    margin-right: 10px;    
+    display: flex;
+    gap: 10px;
+    flex: 1 1 auto; /*flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+}
+
+#filter{
+    flex: 1 1 auto; /*flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+}
+
+.search-button{
+display: flex;
+gap:10px;
+width:10%;
+background-color: transparent !important;
+border: none;
+padding:0;
+align-items: center;
+}
+
+/*Styling for rating and reviews */
+.rating-style{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    align-items: center;
+    margin-bottom: 10px;    
+}
+
+.rating-style div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rating-style input[type="radio"] {
+    margin-right: 5px; /* Controls the space between radio button and its label */
+}
+
+.genre-option div {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+textarea {
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+    display:block;
+    width:100%;        /* Makes the textarea take  width of its parent container */
+    height: 150px;    /* Sets a fixed height */
+    padding:10px;
+}
+
+.form-container { /* This styling is used for add form and update form */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px solid #d3d6db; /* Add border width, style, and color */
+}
+
+.genre-option {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.warning { /* This is tyling for error message when user enter incorrect format of data*/
+    color: red;
+    padding: 20px;
+    font-size: 14pt;
+    display: block;
+    width:100%;
+    margin:0;
+
+}
+
+.field-highlight {
+    border: 2px solid red !important; /* Highlight the field that has error message */
+    }
+
+
+.textfield{
+    background-color: #eeeeee;
+    padding-bottom: 0;
+}
+
+.page-delete {
+    font-size: large;
+}
+
+#user-genres {
+    text-align: center;
+}
+
+#user-genres ul {
+    list-style-position: inside;
+    display: inline-block; 
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#rate-and-review div {
+    padding: 0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+
+#review-container textarea {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.rating-style {
+    justify-content: center;
+    border: none;
+    padding: 0;
+}
+
+/* Reviews */
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Gap between each review record */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* 3 columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-item div {
+    box-shadow: none;
+    padding: 0;
+}
+
+.reviewer_username {
+    grid-column : 1 / span 1;
+    grid-row : 1 / span 2;
+    font-weight: bold;
+    color: green;
+}
+
+.reviewer_username a {
+    text-decoration: none;
+    color: green;
+}
+
+.reviewer_username a:hover {
+    color: white;
+    background-color: green;
+}
+
+.review_date {
+    grid-column : 3 / span 1;
+    grid-row : 1 / span 1;
+    color: #999999;
+    font-size: smaller;
+    text-align: right;
+}
+
+.rating {
+    grid-column : 2 / span 1;
+    grid-row : 1 / span 1;
+    color: #ff9800;
+    text-align: left;
+}
+
+.review_text {
+    grid-column : 2 / span 2;
+    grid-row : 2 / span 1;
+    text-align: left;
+    overflow-wrap: break-word; /* Ensures long words break */
+}
+
+.reviewed_book_title {
+    grid-column : 1 / span 1;
+    grid-row : 1 / span 2;
+    font-weight: bold;
+    color: #b15858;
+}
+
+.reviewed_book_title a {
+    text-decoration: none;
+    color: #b15858;
+}
+
+.reviewed_book_title a:hover {
+    color: white;
+    background-color: #b15858;
+}
+
+#user-genres{
+    width: 40%;
+    margin: 0 auto;
+}
+
+#books-reviewed{
+    width: 80%;
+    margin: 20px auto !important;
+    
+    }
+
+#underlined-title{
+    border-bottom: 2px solid #b15858;
+}
+
+/* Styling for error message */
+.error-message {
+    color: red;
+    margin-left: 5px;
+}
+
+.back-link {
+    padding: 10px;
+    background-color: #eeeeee;
+    border: 2px solid grey;
+    border-radius: 12px;
+    color: #233142;
+    font-weight: bold    
+}
+
+
+
+/* Design layout above applied to desktop as default */
+/* Responsive design for Mobile view - Maximum Width 600px*/
+@media screen and (max-width: 600px) {
+
+    main section{
+        padding:10px;
+        margin-bottom:0;
+    }
+
+    #header1 {
+    padding:10px;
+    }
+
+    #header2 {
+        padding:10px;
+        justify-content: center;        
+    }
+
+    header h1 {
+        font-size: 1.8rem ;   
+        text-align: center;        
+    }
+
+    h2 {
+        font-size: 1.4rem ;
+    }
+
+    main-section{
+        margin-bottom:50px;
+    }
+
+    h3{
+        font-size: 1.2rem ;
+    }
+
+
+    header img {
+        width: 25%;    /* Increase the size of the logo */
+        padding:10px;        
+    }
+
+    .nav-link {
+        font-size: 10pt;
+    }
+
+    .blur-background {
+        width:60%;
+        backdrop-filter: blur(50px);
+        width:100%;        
+    }
+    
+    .intro-blur{
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent overlay */
+    backdrop-filter: blur(20px); /* Adjust the blur level */
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    margin: 10px auto; /* Center the content */
+    width:100%;
+    }
+
+    .intro-content {
+    margin-bottom:0;
+    padding:0;
+    }
+
+    .flex-item {
+        flex: 1 1 auto; /* Flex-grow, flex-shrink, flex-basis */
+    }
+    main nav {
+        margin-top: 10px;
+    }
+
+    .login-container {
+        width:100%;
+    }
+
+    .back-ground {
+        height: 60vh; /* Adjusts the height of background for a better visual representation */
+        
+    }
+
+    .signup-container {
+    width: 100%;
+    }
+    
+    .flex-style {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        padding: 10px;
+    }
+
+    #genres{
+        padding:0px;
+    } 
+
+    .header-right {
+        flex-direction: column;
+        gap: 10px;    
+    }
+
+    #searh-form {
+        width: 100%;
+    }
+
+    .search-section {
+    width: 100%;
+    }
+
+    #search_box {
+        width: 100%;
+        flex-direction: column;
+    
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .search-filter-style {
+        flex-direction: column;
+    }
+
+    .search-filter-style div {
+        gap: 10px;
+        margin:0;
+
+    }
+
+    .search_type{
+        width:100%;
+    }
+
+    .homediv{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        height: auto;
+        gap: 20px;
+        background: #f5f9ee;
+    }   
+
+
+    textarea {    
+        height: 150px;
+    }
+
+    .genre-option {
+        gap:0;
+    }
+
+    .form-container{
+        width:100%;
+    }
+
+    dd {
+        margin:20px;
+        overflow-wrap: break-word;
+    }
+    dt {
+        width: 100%; 
+    }
+
+    .summary{
+        display: inline;
+    }
+
+    .rating-style {
+
+        flex-direction: column;
+    }
+
+    .review-container{
+        width: 80%;
+        height: auto;
+    }
+
+    #user-genres{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #books-reviewed {
+        width:100%;
+    }
+
+
+    .reviewed_book_title {
+        grid-column : 1/4;
+        grid-row : 1/2;
+        font-weight: bold;
+        color: #b15858;
+    }
+
+    .review_date {
+        grid-column: 2/4;
+        grid-row:2/3
+    }
+
+    .rating {
+        grid-column: 1/4;
+        grid-row:3/4;
+    }
+    
+    .review_text{
+        padding:20px;
+        font-size: 12pt;
+        grid-column:1/4;
+        grid-row: 4/5;
+    }
+    
+    .bookimage {
+        width: 40%;
+    }
+    
+}
+
+/* Responsive design for Tablet view- Maximum Width 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    main section{
+        padding:10px;
+        margin-bottom:0;
+    }
+
+    #header1 {
+        padding:10px;
+    }
+    
+    #header2 {
+        padding:10px;
+        justify-content: center;        
+    }
+
+    .flex-item {
+        flex: 1 1 auto;        /* Flex-grow, flex-shrink, flex-basis */
+
+    }
+
+    .search-section {
+        width: 100%;
+    }
+
+    #search_box {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+
+    .button {
+        margin-top: 10px;
+    }
+
+    .search-filter-style {
+        flex-direction: column;
+    }
+
+    .search-filter-style div {
+        gap: 10px;
+        margin: 0;
+
+    }
+
+    .search_type {
+        width: 100%;
+    
+        }
+    
+    .reviewed_book_title {
+        grid-column : 1/4;
+        grid-row : 1/2;
+        font-weight: bold;
+        color: #b15858;
+    }
+
+    .review_date {
+        grid-column: 2/4;
+        grid-row:2/3
+    }
+
+    .rating {
+        grid-column: 1/4;
+        grid-row:3/4;
+    }
+    .review_text{
+        overflow-wrap: break-word; /* Ensures long words break */
+        padding:20px;
+        font-size: 12pt;
+        grid-column:1/4;
+        grid-row: 4/5;
+    }
+
+    .genre-option { /*styling for genre options in the update.php */
+        gap:0;
+    }
+}
