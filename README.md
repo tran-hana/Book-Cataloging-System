@@ -6,7 +6,7 @@ Book Management Tools: Provides functionality to add, modify, and delete books d
 
 Advanced Search Options: Offers the ability to search and filter books by attributes like title, author, and genre.
 
-Interactive Features: Includes options for book reviews, ratings, and personalized suggestions based on user preferences.
+Interactive Features: Includes options for book reviews, ratings.
 
 Validation Mechanisms: Implements JavaScript-based client-side form validation for improved usability.
 
